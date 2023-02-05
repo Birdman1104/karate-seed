@@ -1,0 +1,58 @@
+{
+    "name": "phaser3-ts-template",
+    "version": "1.0.0",
+    "description": "Phaser 3 template, with typescript and deploy script",
+    "main": "index.js",
+    "scripts": {
+        "generateAssets": "node nodeScripts/GenerateAssets.js",
+        "start": "npm run generateAssets && npm run generateEventNames && webpack serve --config webpack/webpack.dev.js",
+        "generateEventNames": "node nodeScripts/GenerateEventNames.js",
+        "build": "webpack --config webpack/webpack.prod.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint . --ext .ts",
+        "format": "prettier --check src/app/**",
+        "format:write": "prettier --write src/app/**"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Birdman1104/phaser3-ts-templaet.git"
+    },
+    "author": "Arsen Mazmanyan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Birdman1104/phaser3-ts-templaet/issues"
+    },
+    "homepage": "https://github.com/Birdman1104/phaser3-ts-templaet#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.40.1",
+        "@typescript-eslint/parser": "^5.40.1",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.1",
+        "eslint": "^8.25.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "fork-ts-checker-webpack-plugin": "^6.5.2",
+        "free-tex-packer-core": "^0.3.4",
+        "html-webpack-plugin": "^5.5.0",
+        "prettier": "^2.7.1",
+        "stats.js": "^0.17.0",
+        "style-loader": "^3.3.1",
+        "ts-loader": "^9.4.1",
+        "typescript": "^4.8.4",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.11.1",
+        "webpack-merge": "^5.8.0",
+        "webpack-obfuscator": "^3.5.1"
+    },
+    "dependencies": {
+        "@armathai/lego": "^5.0.9",
+        "@armathai/lego-logger": "^4.0.0",
+        "@koreez/phaser3-ninepatch": "^2.0.2",
+        "inverse-kinematics": "^0.1.3",
+        "is-mobile": "^3.1.1",
+        "phaser": "^3.55.2",
+        "uuid": "^9.0.0"
+    }
+}
